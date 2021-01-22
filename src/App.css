@@ -5,9 +5,17 @@
 
 #Labels {
 	display: flex;
-	background-color: red;
+	font-size: 1.5em;
 }
 
+#start_stop,
+#reset {
+	font-size: 1.5em;
+	border: none;
+	background: none;
+	cursor: pointer;
+	outline: none;
+}
 #wrapper {
 	background-color: orange;
 	display: flex;
@@ -17,10 +25,21 @@
 	height: 100vh;
 }
 
-#break-label {
-	margin-right: 50px;
+#timer-wrapper {
+	border: 5px rosybrown solid;
+	border-radius: 15px;
+	padding: 0px 40px;
+	text-align: center;
+	margin: 30px 0px;
+	font-size: 1.5em;
 }
 
-/* #session-label {
-	margin-left: 100px;
-} */
+#break-label {
+	margin-right: 20px;
+	text-align: center;
+}
+
+#session-label {
+	margin-left: 20px;
+	text-align: center;
+}

@@ -3,20 +3,18 @@ import "./App.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 
 function Timer(props) {
-	const Reset = () => {
-		props.handleReset();
-	};
-
 	return (
 		<React.Fragment>
-			<p id="timer-label">{props.label}</p>
-			<h1 id="time-left">{props.session}</h1>
-			<i
-				id="start_stop"
-				class="fas fa-play"
-				onClick={props.handleStartStop}
-			></i>
-			<i id="reset" class="fas fa-sync" onClick={Reset}></i>
+			<div id="timer-wrapper">
+				<p id="timer-label">{props.label}</p>
+				<h1 id="time-left">{props.session}</h1>
+			</div>
+			<button id="start_stop" onClick={props.handleStartStop}>
+				<i class="fas fa-play"></i>
+				<i class="fas fa-pause"></i>
+			</button>
+
+			<i id="reset" class="fas fa-sync" onClick={props.handleReset}></i>
 			<audio
 				id="beep"
 				src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
